@@ -1,0 +1,3 @@
+# Biome reads this file during tracker type generation. Vercel CLI excludes it
+# by default, although Git-based builds include it.
+!.gitignore
