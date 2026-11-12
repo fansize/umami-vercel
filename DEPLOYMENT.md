@@ -4,6 +4,8 @@ This fork deploys Umami 3.5.0 using the [official Vercel guide](https://docs.uma
 
 The repository pins Node.js 22.x and pnpm 12.3.4. Vercel must use the repository root and the Next.js preset. `vercel.json` installs the frozen workspace lockfile and runs the complete Umami build, including Prisma generation, database checks and migrations, tracker/recorder generation, workspace packages, and Next.js. Do not replace it with `next build` alone.
 
+`.vercelignore` keeps `.gitignore` in CLI uploads because Biome requires it during tracker type generation. Git-based deployments already include that file.
+
 Set these in Vercel environment settings; never commit their values:
 
 - `DATABASE_URL`: PostgreSQL connection string, pooled if available.
